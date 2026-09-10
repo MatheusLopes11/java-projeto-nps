@@ -14,10 +14,15 @@ public class Main{
 
         do{
 
-            System.out.println("Digite a sua avaliação (-1 para sair): ");
+            System.out.println("Digite a sua avaliação entre 1-10 (-1 para sair): ");
             int entradaUsuario = entrada.nextInt();
 
             if (entradaUsuario < 0) break;
+
+            if (entradaUsuario > 10){
+                System.out.println();
+                System.out.println("Digite um valor válido!\n");
+            }
             else if (entradaUsuario >= 9 && entradaUsuario <= 10){
                 promotores ++;
                 total ++;
@@ -36,7 +41,7 @@ public class Main{
         double pDetratores = (detratores * 100.0) / total;
 
         double npsFinal = pPromotores - pDetratores;
-        System.out.println("NPS Final: " + npsFinal);
+        System.out.printf("NPS Final: %.2f", npsFinal);
 
         entrada.close();
 
