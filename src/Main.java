@@ -30,8 +30,13 @@ public class Main{
                 total++;
             }
 
-
         }while(true);
+
+        double pPromotores = (promotores * 100.0) / total;
+        double pDetratores = (detratores * 100.0) / total;
+
+        double npsFinal = pPromotores - pDetratores;
+        System.out.println("NPS Final: " + npsFinal);
 
         entrada.close();
 
