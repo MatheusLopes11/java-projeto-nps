@@ -6,6 +6,7 @@ public class Main{
 
         Scanner entrada = new Scanner(System.in);
 
+        System.out.println("===================================");
         System.out.println("MOTOR DE COLETA DE AVALIAÇÕES (NPS)\n");
 
         int total = 0;
@@ -14,6 +15,7 @@ public class Main{
 
         do{
 
+            System.out.println("=================================================");
             System.out.println("Digite a sua avaliação entre 1-10 (-1 para sair): ");
             int entradaUsuario = entrada.nextInt();
 
@@ -46,9 +48,9 @@ public class Main{
         if (total > 0) {
             System.out.println("Resumo dos Resultados:\n");
             System.out.printf("Total de clientes: %d", total);
-            System.out.printf("Percentual de Promotores: %.2f%%%n", pPromotores);
-            System.out.printf("Percentual de Detratores: %.2f%%%n", pDetratores);
-            System.out.printf("Net Promoter Score (NPS): %.2f%n", npsFinal);
+            System.out.printf("Percentual de Promotores: %.2f%%\n", pPromotores);
+            System.out.printf("Percentual de Detratores: %.2f%%\n", pDetratores);
+            System.out.printf("Net Promoter Score (NPS): %.2f\n", npsFinal);
         }
         else{
             System.out.println("\nNenhuma nota foi inserida.");
