@@ -41,7 +41,18 @@ public class Main{
         double pDetratores = (detratores * 100.0) / total;
 
         double npsFinal = pPromotores - pDetratores;
-        System.out.printf("NPS Final: %.2f", npsFinal);
+
+
+        if (total > 0) {
+            System.out.println("Resumo dos Resultados:\n");
+            System.out.printf("Total de clientes: %d", total);
+            System.out.printf("Percentual de Promotores: %.2f%%%n", pPromotores);
+            System.out.printf("Percentual de Detratores: %.2f%%%n", pDetratores);
+            System.out.printf("Net Promoter Score (NPS): %.2f%n", npsFinal);
+        }
+        else{
+            System.out.println("\nNenhuma nota foi inserida.");
+        }
 
         entrada.close();
 
