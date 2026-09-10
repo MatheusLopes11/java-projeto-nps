@@ -18,6 +18,18 @@ public class Main{
             int entradaUsuario = entrada.nextInt();
 
             if (entradaUsuario < 0) break;
+            else if (entradaUsuario >= 9 && entradaUsuario <= 10){
+                promotores ++;
+                total ++;
+            }
+            else if (entradaUsuario >= 0 && entradaUsuario <= 6){
+                detratores++;
+                total++;
+            }
+            else if (entradaUsuario == 7 || entradaUsuario == 8){
+                total++;
+            }
+
 
         }while(true);
 
