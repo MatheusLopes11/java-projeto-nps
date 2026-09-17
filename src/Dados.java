@@ -6,6 +6,7 @@ public class Dados {
     private double porcentagemPromotores = 0.0;
     private double porcentagemDetratores = 0.0;
     private double npsFinal = 0.0;
+    public int[] historicoNotas = new int[100];
 
     public int getTotal(){
         return this.total;
